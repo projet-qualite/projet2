@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1568760031 source:c:\users\fry\desktop\poo renaissance\point\point.cpp
+	"Point.h"
+	<cmath>
+
+1568760040 c:\users\fry\desktop\poo renaissance\point\point.h
+	<iostream>
+
+1446667744 source:c:\users\fry\desktop\poo renaissance\robot\main.cpp
+	<iostream>
+
+1573179425 source:c:\users\fry\desktop\poo renaissance\robot\robot.cpp
+	"robot.h"
+
+1573180660 c:\users\fry\desktop\poo renaissance\robot\robot.h
+	"Point.h"
+
+1568760040 c:\users\fry\desktop\poo renaissance\robot\point.h
+	<iostream>
+
+1573179618 source:c:\users\fry\desktop\poo renaissance\robot\robot1g.cpp
+	"robot1g.h"
+
+1573179505 c:\users\fry\desktop\poo renaissance\robot\robot1g.h
+	"robot.h"
+
+1573180359 source:c:\users\fry\desktop\poo renaissance\robot\robot2g.cpp
+	"robot2g.h"
+
+1573180347 c:\users\fry\desktop\poo renaissance\robot\robot2g.h
+	"robot1g.h"
+
