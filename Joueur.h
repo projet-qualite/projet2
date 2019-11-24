@@ -1,20 +1,20 @@
 #ifndef JOUEUR_H
 #define JOUEUR_H
-#include<string>
+#include <string>
+
+using namespace std;
 
 class Joueur
 {
     public:
-        Joueur(const string& nom, int x, int y);
-        virtual  void up();
-        virtual void down();
-        virtual void right();
-        virtual void left();
+        Joueur(const string& nom);
+        void up();
+        void down();
+        void right();
+        void left();
         int posx() const;
         int posy() const;
-        virtual ~Joueur();
-
-    protected:
+        string nom() const;
 
     private:
         string d_nom;
@@ -23,7 +23,7 @@ class Joueur
         void rightup();
         void leftup();
         void rightdown();
-        void leftdown;
+        void leftdown();
 };
 
 #endif // JOUEUR_H

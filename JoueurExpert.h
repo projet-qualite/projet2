@@ -6,8 +6,8 @@
 class JoueurExpert : public Joueur
 {
     public:
-        Joueur(string nom, int x, int y);
-        virtual ~Joueur();
+        JoueurExpert(const string &nom);
+
 
 };
 
