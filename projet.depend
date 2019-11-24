@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1573908976 source:c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\main.cpp
+	<iostream>
+
+1574550112 source:c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\grille.cpp
+	"grille.h"
+
+1574550073 c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\grille.h
+
