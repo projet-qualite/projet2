@@ -7,6 +7,7 @@ using namespace std;
 class Joueur
 {
     public:
+        Joueur();
         Joueur(const string& nom);
         void up();
         void down();
@@ -16,14 +17,15 @@ class Joueur
         int posy() const;
         string nom() const;
 
-    private:
-        string d_nom;
-        int d_x;
-        int d_y;
         void rightup();
         void leftup();
         void rightdown();
         void leftdown();
+
+    private:
+        string d_nom;
+        int d_x;
+        int d_y;
 };
 
 #endif // JOUEUR_H

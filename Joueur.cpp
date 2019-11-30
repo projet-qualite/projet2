@@ -1,52 +1,84 @@
 #include "Joueur.h"
+#include<iostream>
 
-Joueur::Joueur(const string& nom): d_nom(nom), d_x(), d_y()
+Joueur::Joueur(): d_nom(), d_x(0), d_y(0)
+{
+
+}
+
+
+Joueur::Joueur(const string& nom): d_nom(nom), d_x(0), d_y(0)
 {
 
 }
 
 void Joueur::up()
 {
-    --d_x;
+    if(d_x==0)
+    {
+        cout<<"Impossible de sortir de la grille"<<endl;
+    }else
+    {
+        --d_x;
+    }
+
 }
 
 void Joueur::down()
 {
-    ++d_x;
+    //if(d_x== taillegrille)
+    //{
+     //   cout<<"Impossible de sortir de la grille"<<endl;
+   // }else
+   // {
+        ++d_x;
+   //}
 }
 
 void Joueur::right()
 {
-    ++d_y;
+    //if(d_y==taillegrille)
+   // {
+     //   cout<<"Impossible de sortir de la grille"<<endl;
+    //}else
+    //{
+        ++d_y;
+    //}
 }
 
 void Joueur::left()
 {
-    --d_y;
+    //if(d_y==0)
+    //{
+      //  cout<<"Impossible de sortir de la grille"<<endl;
+    //}else
+    //{
+        --d_y;
+    //}
 }
 
 void Joueur::rightup()
 {
-    --d_x;
-    ++d_y;
+    this->up();
+    this->right();
 }
 
 void Joueur::leftup()
 {
-    --d_x;
-    --d_y;
+    this->up();
+    this->left();
 }
 
 void Joueur::rightdown()
 {
-    ++d_x;
-    ++d_y;
+    this->down();
+    this->right();
 }
 
 void Joueur::leftdown()
 {
-    ++d_x;
-    --d_y;
+    this->down();
+    this->left();
 }
 
 int Joueur::posx() const
