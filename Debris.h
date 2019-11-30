@@ -5,6 +5,7 @@
 class Debris
 {
      public:
+        Debris();
         Debris(int x, int y);
         int posx() const;
         int posy() const;
