@@ -1,28 +1,10 @@
 #include "grille.h"
 
- Grille::Grille(int Long,int Lar):D_Longeur{Long},D_largeur{Lar}{};
+ Grille::Grille(int dimension):D_dimension{dimension}{};
 
-/*void Grille::SetLargeur(int x){
-  D_Largeur=x;
-}*/
 
-void Grille::SetLongeur(int x){
-D_Longeur=x
+int Grille::GetDimension()const{
+
+return D_dimension;
 }
-
-int Grille::GetLargeur()const{
-
-return D_largeur;
-}
-
-int Grille::GetLongeur()const{
-
-return D_Longeur;
-}
-
-/*Grille::afficheGrille()const{
-
-
-
-
-}*/
+//test Git Changement
