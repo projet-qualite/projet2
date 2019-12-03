@@ -5,16 +5,15 @@ class Grille{
 
 public:
 
-     Grille(int Long,int Lar);
-    void SetLargeur(int x);
-    void SetLongeur(int x);
-    void afficheGrille()const;
-    int GetLargeur()const;
-    int GetLongeur()const;
+        Grille(int dimension);
+        int GetDimension()const;
+        void afficheGrille()const;
+
+
 
 private:
 
-    int D_Longeur,D_largeur;
+    int D_dimension;
 
 };
 
