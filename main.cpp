@@ -4,7 +4,7 @@
 #include"grille.h"
 using namespace std;
 
-static int dim[2];
+static int dim;
 
 void LireFichier(){
 
@@ -14,14 +14,12 @@ void LireFichier(){
    {
        string ligne;
 
-      int i=0;
-      while(getline(fichier, ligne)) //Tant qu'on n'est pas à la fin, on lit
-      {
-          dim[i]=std::stoi( ligne );
-         ++i;
 
+      while(getline(fichier, ligne))
+      {
+          dim=std::stoi( ligne );
       }
-      for( i=0;i<2;i++){cout<<dim[i]<<endl;}
+
    }
    else
    {
@@ -29,35 +27,51 @@ void LireFichier(){
    }
 
 }
+void modifierFichier(int n){
+            ofstream fichier("projet.txt");
+
+                   if(fichier)
+                   {
+                     fichier <<n ;
+                      }
+
+                   else
+                   {
+                      cout << "ERREUR: Impossible d'ouvrir le fichier en lecture." << endl;
+                   }
+
+}
 int main()
 {
+    int rep;
+do{
+    cout<<" pour continuer tapez 1 "<<endl<<" pour commencer une nouvelle partie tapez 2 "<<endl;
+    cin>>rep;
+    switch(rep){
 
-    LireFichier();
-    Grille(dim[0],dim[1]);
+    case 1 :
+                LireFichier();
+                Grille{dim};
+
+                break;
+
+    case 2 :
+                int choixDim;
+                do{
+                cout<<" veuillez choisir la dimension du terrain "<<endl;
+
+                cin>>choixDim;
+                }while(choixDim<3);
+                modifierFichier(choixDim);
+
+                break;
+
+    default : cout<<" Choix invalide " <<endl;
+
+    }
+
+    }while(rep!=1&&rep!=2);
    return 0;
 
 
 }
-/*char grille[5][5];
-
-	for (int i(0); i < 5; i++) {
-		for (int j(0); j < 5; j++) {
-			grille[i][j] = '_';
-		}
-	}
-	//  affichage grille
-	for (int i(0); i < 5; i++) {
-		for (int j(0); j < 5; j++) {
-			if (grille[i][j] == '_' && i == 4)
-				cout << " ";
-			else
-				cout << grille[i][j];
-			if (j != 4)
-				cout << "|";
-			else
-				cout << endl;
-		}
-	}
-	cout << endl;
-}*/
-
