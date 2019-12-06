@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1575387892 source:c:\users\dell\desktop\work\projets\débris\main.cpp
+	<iostream>
+	"elementdejeux.h"
+	"Grille.h"
+	"Joueur.h"
+	"JoueurSimple.h"
+	"RobotAyb.h"
+	"RobotAybG1.h"
+	"RobotAybG2.h"
+	"Debris.h"
+
+1575124716 source:c:\users\dell\desktop\work\projets\débris\debris.cpp
+	"Debris.h"
+	<stdlib.h>
+
+1575124170 c:\users\dell\desktop\work\projets\débris\debris.h
+
+1575378917 source:c:\users\dell\desktop\work\projets\débris\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
+1575378998 c:\users\dell\desktop\work\projets\débris\joueur.h
+	<string>
+	"elementdejeux.h"
+
+1574613298 source:c:\users\dell\desktop\work\projets\débris\joueurexpert.cpp
+	"JoueurExpert.h"
+
+1574613388 c:\users\dell\desktop\work\projets\débris\joueurexpert.h
+	"Joueur.h"
+
+1575388731 source:c:\users\dell\desktop\work\projets\débris\robotayb.cpp
+	"RobotAyb.h"
+	<math.h>
+
+1575388718 c:\users\dell\desktop\work\projets\débris\robotayb.h
+	"elementdejeux.h"
+	<string>
+
+1575373782 source:c:\users\dell\desktop\work\projets\débris\robotaybg2.cpp
+	"RobotAybG2.h"
+
+1575373782 c:\users\dell\desktop\work\projets\débris\robotaybg2.h
+	"RobotAybG1.h"
+
+1575373749 c:\users\dell\desktop\work\projets\débris\robotaybg1.h
+	"RobotAyb.h"
+	<iostream>
+
+1575373638 source:c:\users\dell\desktop\work\projets\débris\joueursimple.cpp
+	"JoueurSimple.h"
+	"Joueur.h"
+
+1575378151 c:\users\dell\desktop\work\projets\débris\joueursimple.h
+	"Joueur.h"
+
+1575373749 source:c:\users\dell\desktop\work\projets\débris\robotaybg1.cpp
+	"RobotAybG1.h"
+	<iostream>
+
+1575378088 c:\users\dell\desktop\work\projets\débris\elementdejeux.h
+	<iostream>
+	<string>
+
+1575378061 source:c:\users\dell\desktop\work\projets\débris\grille.cpp
+	"Grille.h"
+	<iostream>
+	"elementdejeux.h"
+
+1575379491 c:\users\dell\desktop\work\projets\débris\grille.h
+	"elementdejeux.h"
+	<vector>
+	<iostream>
+
+1575378457 source:c:\users\dell\desktop\work\projets\débris\elementdejeux.cpp
+	"elementdejeux.h"
+
