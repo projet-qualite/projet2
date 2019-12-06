@@ -19,6 +19,7 @@ public:
 
 private:
     double d_x,d_y;
+    double z;
 };
 std::ostream& operator<<(std::ostream& ost,const Point& p);
 std::istream& operator>>(std::istream& ist,Point p);
