@@ -1,6 +1,7 @@
 #include "Debris.h"
 #include <stdlib.h>
 
+
 Debris::Debris(): d_x(rand()%5+3),d_y(rand()%5)
 {
     //ctor
