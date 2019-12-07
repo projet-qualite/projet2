@@ -5,15 +5,17 @@ class Grille{
 
 public:
 
-        Grille(int dimension);
-        int GetDimension()const;
+        Grille(int dimensionX,int dimensionY);
+        int GetDimensionX()const;
+        int GetDimensionY()const;
+
         void afficheGrille()const;
 
 
 
 private:
 
-    int D_dimension;
+    int D_dimensionX, D_dimensionY;
 
 };
 

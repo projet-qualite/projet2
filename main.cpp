@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include"graphics.h"
 #include"grille.h"
 using namespace std;
-
+/*
 static int dim;
 
 void LireFichier(){
@@ -41,8 +42,10 @@ void modifierFichier(int n){
                    }
 
 }
+*/
 int main()
 {
+    /*
     int rep;
 do{
     cout<<" pour continuer tapez 1 "<<endl<<" pour commencer une nouvelle partie tapez 2 "<<endl;
@@ -72,6 +75,14 @@ do{
 
     }while(rep!=1&&rep!=2);
    return 0;
+*/Grille G(6,6);
+
+ opengraphsize(1800,900);
+ cleardevice();
+ G.afficheGrille();
+ getch();
+ closegraph();
+
 
 
 }

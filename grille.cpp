@@ -1,50 +1,48 @@
 #include "grille.h"
+#include"graphics.h"
+#include<iostream>
+ using namespace std;
+ //Constructeur de la Grille
+ Grille::Grille(int dimensionX,int dimensionY):D_dimensionX{dimensionX},D_dimensionY{dimensionY}{};
 
- Grille::Grille(int dimension):D_dimension{dimension}{};
+/*
+@return la dimension X
+*/
+int Grille::GetDimensionX()const{
 
+    return D_dimensionX;
+}
+/*
+@return la dimension Y
+*/
+int Grille::GetDimensionY()const{
 
-int Grille::GetDimension()const{
-
-return D_dimension;
+    return D_dimensionY;
 }
 
-
+// affichae de la grille
 void Grille::afficheGrille()const
 {
 
-    int y1=200;
-    int y2=200;
-    int y3=50;
-    int y4=50;
-
-for(int i=0;i<D_dimension;++i)
+   int x1=0,y1=0,x2=0,y2=0,x3=0,y3=0,x4=0,y4=0;
+for(int i=0;i<D_dimensionY;i++)
 {
-    int x1=200;
-    int x2=400;
-    int x3=400;
-    int x4=200;
-    cout<<y3<<"  "<<y4<<endl;
-    for(int j=0;j<D_dimension;++j)
+    y1+=100;
+    y2=y1;
+    y3=y1+100;
+    y4=y3;
+   for(int j=0;j<D_dimensionX;j++)
     {
-        int tab2[]={x1,y1,x2,y2,x3,y3,x4,y4,x1,y1};
-        drawpoly(5,tab2);
-        int ix2=x2;
-        int ix3=x3;
-        x2+=200;
-        x1=ix2;
-        x4=ix3;
-        x3+=200;
-        cout<<y3<<"  "<<y4<<endl;
+        x1+=100;
+        x2=x1+100;
+        x3=x2;
+        x4=x1;
+        int T[]={x1,y1,x2,y2,x3,y3,x4,y4,x1,y1};
+        drawpoly(5,T);
 
     }
-
-    int iy4=y4;
-    int iy3=y3;
-    y1=iy4;
-    y2=iy3;
-    y3+=300;
-    y4+=300;
-    cout<<y3<<"  "<<y4<<endl;
-
+        x1=0;
+        x2=0;x3=0;x4=0;
+    }
 }
-//test Git Changement
+
