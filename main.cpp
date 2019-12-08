@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include<windows.h>
 #include"graphics.h"
 #include"grille.h"
 using namespace std;
@@ -75,14 +76,36 @@ do{
 
     }while(rep!=1&&rep!=2);
    return 0;
-*/Grille G(6,6);
+*/Grille G(4,4);
+int x=250,y=150;
 
  opengraphsize(1800,900);
- cleardevice();
  G.afficheGrille();
- getch();
- closegraph();
+ circle(x,150,20);
+ while(1)
+ {
+
+ if(GetAsyncKeyState(VK_RIGHT))
+ {
+
+     x+=100;
+      G.afficheGrille();
+     circle(x,150,20);
+
+ }
+ cleardevice();
+ }
 
 
 
-}
+
+ cleardevice();
+
+
+ }
+ //getch();
+//  closegraph();
+
+
+
+

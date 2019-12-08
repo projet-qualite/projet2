@@ -7,26 +7,27 @@
 
 1574550073 c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\grille.h
 
-1461226436 source:c:\users\oussama\desktop\testprojet\winbgi.cpp
+1575762090 source:c:\users\oussama\desktop\testprojet\winbgi.cpp
 	<windows.h>
 	<stddef.h>
 	<stdio.h>
 	<math.h>
 	"graphics.h"
 
-1461226426 c:\users\oussama\desktop\testprojet\graphics.h
+1575762090 c:\users\oussama\desktop\testprojet\graphics.h
 
-1575732711 source:c:\users\oussama\desktop\testprojet\grille.cpp
+1575764042 source:c:\users\oussama\desktop\testprojet\grille.cpp
 	"grille.h"
 	"graphics.h"
 	<iostream>
 
-1575730484 c:\users\oussama\desktop\testprojet\grille.h
+1575764042 c:\users\oussama\desktop\testprojet\grille.h
 
-1575732657 source:c:\users\oussama\desktop\testprojet\main.cpp
+1575767542 source:c:\users\oussama\desktop\testprojet\main.cpp
 	<iostream>
 	<fstream>
 	<string>
+	<windows.h>
 	"graphics.h"
 	"grille.h"
 
