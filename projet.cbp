@@ -32,9 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="graphics.h" />
 		<Unit filename="grille.cpp" />
 		<Unit filename="grille.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="winbgi.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
