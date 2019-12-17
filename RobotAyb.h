@@ -8,10 +8,9 @@ using namespace std;
 class RobotAyb:public elementdejeux
 {
 public:
-    RobotAyb();
     RobotAyb(const string &nom, int x, int y);
-    //int x() const;
-    //int y() const;
+    int x() const;
+    int y() const;
     double distance(const RobotAyb& r) const;
     //virtual void setposx()=0;
     //virtual void setposy()=0;

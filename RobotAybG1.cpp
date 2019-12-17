@@ -1,10 +1,7 @@
 #include "RobotAybG1.h"
 #include<iostream>
+#include "graphics.h"
 
-RobotAybG1::RobotAybG1():RobotAyb()
-{
-    //ctor
-}
 
 RobotAybG1::RobotAybG1(const string &nom, int x, int y):RobotAyb(nom,x,y)
 {
@@ -21,6 +18,12 @@ void RobotAybG1::up()
         --d_x;
     }
 
+}
+
+void RobotAybG1::affiche() const
+{
+    setcolor(1);
+    fillellipse(300+(d_y)*200,120+(d_x)*150,50,50);
 }
 
 void RobotAybG1::down()

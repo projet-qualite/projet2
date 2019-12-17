@@ -6,7 +6,6 @@
 class RobotAybG2:public RobotAybG1
 {
     public:
-        RobotAybG2();
         RobotAybG2(const string &nom, int x, int y);
         void rightup();
         void leftup();

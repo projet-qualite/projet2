@@ -9,6 +9,7 @@ class RobotAybG1: public RobotAyb
     public:
         RobotAybG1();
         RobotAybG1(const string &nom, int x, int y);
+        virtual void affiche() const;
         void up();
         void down();
         void right();

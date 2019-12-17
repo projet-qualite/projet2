@@ -9,8 +9,10 @@ class elementdejeux
 {
     public:
         elementdejeux();
+        ~elementdejeux();
         elementdejeux(const string &nom, int x, int y);
-        virtual void affiche() const;
+        virtual void affiche() const=0;
+        virtual void affiche2() const;
         int x()const ;
         int y()const ;
         string nom()const;
@@ -19,6 +21,7 @@ class elementdejeux
         int d_x;
         int d_y;
         string d_nom;
+        int a_x,a_y;
 
 
 };

@@ -1,9 +1,5 @@
 #include "RobotAybG2.h"
 
-RobotAybG2::RobotAybG2():RobotAybG1()
-{
-    //ctor
-}
 
 RobotAybG2::RobotAybG2(const string &nom, int x, int y):RobotAybG1(nom,x,y)
 {
@@ -33,6 +29,3 @@ void RobotAybG2::leftdown()
     this->down();
     this->left();
 }
-
-
-
