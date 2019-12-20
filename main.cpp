@@ -80,19 +80,75 @@ do{
 int x=250,y=150;
 
  opengraphsize(1800,900);
- G.afficheGrille();
- circle(x,150,20);
- while(1)
+
+ /*while(1)
  {
 
  if(GetAsyncKeyState(VK_RIGHT))
  {
 
-     x+=100;
-      G.afficheGrille();
-     circle(x,150,20);
+   */
+    //x+=100;
+    G.afficheGrille();
+    circle(x,y,20);
+    while(1)
+    {
+    if(GetAsyncKeyState(VK_RIGHT))
+    {
+        for(int i=0;i<100;i++)
+        {
+        G.afficheGrille();
+        circle(++x,y,20);
+        delay(1);
+        cleardevice();
+        }
+            circle(x,y,20);
+    G.afficheGrille();
+    }
+    if(GetAsyncKeyState(VK_LEFT))
+    {
+        for(int i=0;i<100;i++)
+        {
+        G.afficheGrille();
+        circle(--x,y,20);
+        delay(1);
+        cleardevice();
+        }
+            circle(x,y,20);
+    G.afficheGrille();
+    }
+    if(GetAsyncKeyState(VK_UP))
+    {
+        for(int i=0;i<100;i++)
+        {
+        G.afficheGrille();
+        circle(x,--y,20);
+        delay(1);
+        cleardevice();
+        }
+            circle(x,y,20);
+    G.afficheGrille();
+    }
+    if(GetAsyncKeyState(VK_DOWN))
+    {
+        for(int i=0;i<100;i++)
+        {
+        G.afficheGrille();
+        circle(x,++y,20);
+        delay(1);
+        cleardevice();
+        }
+            circle(x,y,20);
+    G.afficheGrille();
+    }
+
+    }
+
+  //  getch();
+    //closegraph();
 
  }
+ /*
  cleardevice();
  }
 
@@ -102,9 +158,8 @@ int x=250,y=150;
  cleardevice();
 
 
- }
- //getch();
-//  closegraph();
+ }*/
+
 
 
 
