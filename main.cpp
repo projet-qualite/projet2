@@ -11,6 +11,8 @@
 #include "RobotAybG1.h"
 #include "RobotAybG2.h"
 #include "debris.h"
+#include <stdio.h>
+#include <time.h>
 
 
 using namespace std;
@@ -55,39 +57,72 @@ void modifierFichier(int n){
 
 void creerPartie()
 {
-    int x,y;
+    /*int x,y;
     int nb;
     string nom;
     cout<<"Dimension de la grille : ";
     cin>>x;
-    cin>>y;
-    Grille g{x,y};
+    cin>>y;*/
+    int rep;
+do{
+    cout<<" pour continuer tapez 1 "<<endl<<" pour commencer une nouvelle partie tapez 2 "<<endl;
+    cin>>rep;
+    switch(rep){
 
+    case 1 :
+                LireFichier();
 
+                break;
 
+    case 2 :
+                int choixDim;
+                do{
+                cout<<" veuillez choisir la dimension du terrain "<<endl;
+
+                cin>>choixDim;
+                }while(choixDim<3);
+                modifierFichier(choixDim);
+
+                break;
+
+    default : cout<<" Choix invalide " <<endl;
+
+    }
+
+    }while(rep!=1&&rep!=2);
+
+    Grille g{dim,dim};
+   float temps;
+    clock_t t1, t2;
+
+string nom;
         cout<<"Entrer le nom du Robot 1 "<<endl;
         cin>>nom;
 
-        RobotAybG1 r{nom,x-1,y-2};
+        RobotAybG1 r{nom,dim-1,dim-2};
         g.MettreEn(&r);
 
         cout<<"Entrer le nom du Robot 2 "<<endl;
         cin>>nom;
-        RobotAybG1 r2{nom,x-3,y-2};
+        RobotAybG1 r2{nom,dim-3,dim-2};
         g.MettreEn(&r2);
-
-
-    cout<<"Entrer la position du joueur "<<endl;
+int x,y;
+    do{
+        cout<<"Entrer la position du joueur "<<endl;
         cin>>x;
         cin>>y;
+      }while(x>dim||y>dim);//pour ne pas depaser la dim de la grille
+
         cout<<"Entrer le nom du joueur "<<endl;
         cin>>nom;
         JoueurSimple j{nom,x,y};
         g.MettreEn(&j);
         int q=1;
         char choix;
+        t1 = clock();
     do{
             g.afficheGrille2();
+
             cout<<"[Deplacer le joueur]"<<endl;
             cout<<"r-------------------: A droite"<<endl;
             cout<<"l-------------------: A gauche"<<endl;
@@ -111,7 +146,9 @@ void creerPartie()
                 cout<<"Voulez vous une autre partie ? (Oui : 1 | Non : 0)"<<endl;
                 cin>>q;
             }while(q!=0 && q!=1);
-
+            t2 = clock();
+            temps = (float)(t2-t1)/CLOCKS_PER_SEC;
+    printf("votre score est de  = %f secondes", temps);
     }while(q!=0);
 }
 
@@ -138,14 +175,6 @@ int main()
         gr.afficheGrille();
     }*/
     creerPartie();
-
-
-
-
-
-
-
-
 
     return 0;
 }

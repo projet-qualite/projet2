@@ -95,3 +95,92 @@
 1575759973 c:\users\fry\desktop\poo renaissance\robotaybg2.h
 	"RobotAybG1.h"
 
+1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\debris.cpp
+	"Debris.h"
+	<stdlib.h>
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\debris.h
+
+1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\elementdejeux.cpp
+	"elementdejeux.h"
+	"graphics.h"
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\elementdejeux.h
+	<iostream>
+	<string>
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\graphics.h
+
+1576876115 source:c:\users\fatima zahra\desktop\qualite-prog\grille.cpp
+	"grille.h"
+	"graphics.h"
+	<iostream>
+	"math.h"
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\grille.h
+	<vector>
+	"elementdejeux.h"
+
+1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\joueur.h
+	<string>
+	"elementdejeux.h"
+	"graphics.h"
+
+1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\joueursimple.cpp
+	"JoueurSimple.h"
+	"joueur.h"
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\joueursimple.h
+	"joueur.h"
+
+1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\robotayb.cpp
+	"RobotAyb.h"
+	<math.h>
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\robotayb.h
+	"elementdejeux.h"
+	<string>
+
+1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\robotaybg1.cpp
+	"RobotAybG1.h"
+	<iostream>
+	"graphics.h"
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\robotaybg1.h
+	"RobotAyb.h"
+	<iostream>
+
+1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\robotaybg2.cpp
+	"RobotAybG2.h"
+
+1576874213 c:\users\fatima zahra\desktop\qualite-prog\robotaybg2.h
+	"RobotAybG1.h"
+
+1576872678 source:c:\users\fatima zahra\desktop\qualite-prog\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1576876688 source:c:\users\fatima zahra\desktop\qualite-prog\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"grille.h"
+	"graphics.h"
+	<iostream>
+	"elementdejeux.h"
+	"joueur.h"
+	"JoueurSimple.h"
+	"RobotAyb.h"
+	"RobotAybG1.h"
+	"RobotAybG2.h"
+	"debris.h"
+	<stdio.h>
+	<time.h>
+
