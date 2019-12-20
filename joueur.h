@@ -14,20 +14,8 @@ class Joueur:public elementdejeux
         void down();
         void right();
         void left();
-
-
-
-        //int x() const;
-        //int y() const;
-        //string nom() const;
         //int dureevie() const;
         //void survivre();
-
-
-    //private:
-        //string d_nom;
-        //int d_x;
-        //int d_y;
         //int d_duree;
 };
 

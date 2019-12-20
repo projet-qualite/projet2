@@ -95,3 +95,90 @@
 1575759973 c:\users\fry\desktop\poo renaissance\robotaybg2.h
 	"RobotAybG1.h"
 
+1576615739 source:c:\users\oussama\desktop\testprojet\debris.cpp
+	"Debris.h"
+	<stdlib.h>
+
+1576615739 c:\users\oussama\desktop\testprojet\debris.h
+
+1576615739 source:c:\users\oussama\desktop\testprojet\elementdejeux.cpp
+	"elementdejeux.h"
+	"graphics.h"
+
+1576615739 c:\users\oussama\desktop\testprojet\elementdejeux.h
+	<iostream>
+	<string>
+
+1576615739 c:\users\oussama\desktop\testprojet\graphics.h
+
+1576615739 source:c:\users\oussama\desktop\testprojet\grille.cpp
+	"grille.h"
+	"graphics.h"
+	<iostream>
+	"math.h"
+
+1576615739 c:\users\oussama\desktop\testprojet\grille.h
+	<vector>
+	"elementdejeux.h"
+
+1576872507 source:c:\users\oussama\desktop\testprojet\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
+1576872410 c:\users\oussama\desktop\testprojet\joueur.h
+	<string>
+	"elementdejeux.h"
+	"graphics.h"
+
+1576615739 source:c:\users\oussama\desktop\testprojet\joueursimple.cpp
+	"JoueurSimple.h"
+	"joueur.h"
+
+1576615739 c:\users\oussama\desktop\testprojet\joueursimple.h
+	"joueur.h"
+
+1576615934 source:c:\users\oussama\desktop\testprojet\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"grille.h"
+	"graphics.h"
+	<iostream>
+	"elementdejeux.h"
+	"joueur.h"
+	"JoueurSimple.h"
+	"RobotAyb.h"
+	"RobotAybG1.h"
+	"RobotAybG2.h"
+	"debris.h"
+
+1576615739 c:\users\oussama\desktop\testprojet\robotayb.h
+	"elementdejeux.h"
+	<string>
+
+1576615739 c:\users\oussama\desktop\testprojet\robotaybg1.h
+	"RobotAyb.h"
+	<iostream>
+
+1576615739 c:\users\oussama\desktop\testprojet\robotaybg2.h
+	"RobotAybG1.h"
+
+1576615739 source:c:\users\oussama\desktop\testprojet\robotayb.cpp
+	"RobotAyb.h"
+	<math.h>
+
+1576615739 source:c:\users\oussama\desktop\testprojet\robotaybg1.cpp
+	"RobotAybG1.h"
+	<iostream>
+	"graphics.h"
+
+1576615739 source:c:\users\oussama\desktop\testprojet\robotaybg2.cpp
+	"RobotAybG2.h"
+
+1576615739 source:c:\users\oussama\desktop\testprojet\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+

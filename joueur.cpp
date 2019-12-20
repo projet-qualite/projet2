@@ -3,9 +3,7 @@
 
 
 Joueur::Joueur(const string& nom, int x, int y): elementdejeux(nom ,x, y)
-{
-
-}
+{}
 
 void Joueur::up()
 {
@@ -16,7 +14,6 @@ void Joueur::up()
     {
         --d_x;
     }
-
 }
 
 
