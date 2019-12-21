@@ -99,7 +99,7 @@ int x=250,y=150;
         {
         G.afficheGrille();
         circle(++x,y,20);
-        delay(1);
+        delay(0);
         cleardevice();
         }
             circle(x,y,20);
@@ -111,7 +111,7 @@ int x=250,y=150;
         {
         G.afficheGrille();
         circle(--x,y,20);
-        delay(1);
+        delay(0);
         cleardevice();
         }
             circle(x,y,20);
@@ -123,7 +123,7 @@ int x=250,y=150;
         {
         G.afficheGrille();
         circle(x,--y,20);
-        delay(1);
+        delay(0);
         cleardevice();
         }
             circle(x,y,20);
@@ -135,7 +135,7 @@ int x=250,y=150;
         {
         G.afficheGrille();
         circle(x,++y,20);
-        delay(1);
+        delay(0);
         cleardevice();
         }
             circle(x,y,20);
