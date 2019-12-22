@@ -77,7 +77,7 @@ do{
     }while(rep!=1&&rep!=2);
    return 0;
 */Grille G(4,4);
-int x=250,y=150;
+int x=150,y=150;
 
  opengraphsize(1800,900);
 

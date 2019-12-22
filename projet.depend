@@ -31,3 +31,49 @@
 	"graphics.h"
 	"grille.h"
 
+1577040455 source:c:\users\oussama\desktop\projetgit\grille.cpp
+	"grille.h"
+	"graphics.h"
+	<iostream>
+
+1577040455 c:\users\oussama\desktop\projetgit\grille.h
+
+1577040455 c:\users\oussama\desktop\projetgit\graphics.h
+
+1577041670 source:c:\users\oussama\desktop\projetgit\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	"graphics.h"
+	"grille.h"
+
+1577040455 source:c:\users\oussama\desktop\projetgit\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1577037409 source:c:\users\oussama\desktop\projetgit\joueursimple.cpp
+	"JoueurSimple.h"
+	"Joueur.h"
+
+1577037409 c:\users\oussama\desktop\projetgit\joueursimple.h
+	"Joueur.h"
+
+1577037409 c:\users\oussama\desktop\projetgit\joueur.h
+	<string>
+	"elementdejeux.h"
+
+1577041435 c:\users\oussama\desktop\projetgit\elementdejeux.h
+	<iostream>
+	<string>
+
+1577037409 source:c:\users\oussama\desktop\projetgit\elementdejeux.cpp
+	"elementdejeux.h"
+
+1577037409 source:c:\users\oussama\desktop\projetgit\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
