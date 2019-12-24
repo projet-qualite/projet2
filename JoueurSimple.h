@@ -7,7 +7,7 @@ class JoueurSimple: public Joueur
 {
     public:
         JoueurSimple();
-        JoueurSimple(const string& nom, int x, int y);
+        JoueurSimple(const string& nom);
         void rightup();
         void leftup();
         void rightdown();

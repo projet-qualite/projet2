@@ -4,6 +4,8 @@
 #include<windows.h>
 #include"graphics.h"
 #include"grille.h"
+#include"elementdejeux.h"
+#include"Joueur.h"
 using namespace std;
 /*
 static int dim;
@@ -76,49 +78,53 @@ do{
 
     }while(rep!=1&&rep!=2);
    return 0;
-*/Grille G(4,4);
-int x=150,y=150;
-
+*/
+///int x=150,y=150;
+ Grille* G;
+ G=new Grille(5,5);
+ cout << "Entre un nom du Joueur";
+  string nom;
+ cin >> nom;
+ Joueur joueur(nom);
+ joueur.ajouterTerrain(G);
  opengraphsize(1800,900);
 
- /*while(1)
- {
-
- if(GetAsyncKeyState(VK_RIGHT))
- {
-
-   */
-    //x+=100;
-    G.afficheGrille();
-    circle(x,y,20);
+    G->afficheGrille();
+    ///circle(x,y,20);
+    joueur.tracer();
     while(1)
     {
     if(GetAsyncKeyState(VK_RIGHT))
     {
-        for(int i=0;i<100;i++)
+       /** for(int i=0;i<100;i++)
         {
         G.afficheGrille();
         circle(++x,y,20);
         delay(1);
         cleardevice();
         }
-            circle(x,y,20);
-    G.afficheGrille();
+    circle(x,y,20);*/
+    joueur.right();
+    joueur.tracer();
+    G->afficheGrille();
     }
     if(GetAsyncKeyState(VK_LEFT))
     {
-        for(int i=0;i<100;i++)
+       /** for(int i=0;i<100;i++)
         {
         G.afficheGrille();
         circle(--x,y,20);
         delay(1);
         cleardevice();
         }
-            circle(x,y,20);
-    G.afficheGrille();
+            circle(x,y,20);*/
+    joueur.left();
+    joueur.tracer();
+    G->afficheGrille();
     }
     if(GetAsyncKeyState(VK_UP))
     {
+        /**
         for(int i=0;i<100;i++)
         {
         G.afficheGrille();
@@ -126,20 +132,24 @@ int x=150,y=150;
         delay(1);
         cleardevice();
         }
-            circle(x,y,20);
-    G.afficheGrille();
+            circle(x,y,20);*/
+    joueur.up();
+    joueur.tracer();
+    G->afficheGrille();
     }
     if(GetAsyncKeyState(VK_DOWN))
     {
-        for(int i=0;i<100;i++)
+       /** for(int i=0;i<100;i++)
         {
         G.afficheGrille();
         circle(x,++y,20);
         delay(1);
         cleardevice();
         }
-            circle(x,y,20);
-    G.afficheGrille();
+            circle(x,y,20);*/
+    joueur.down();
+    joueur.tracer();
+    G->afficheGrille();
     }
 
     }

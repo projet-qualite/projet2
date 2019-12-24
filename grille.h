@@ -8,7 +8,6 @@ public:
         Grille(int dimensionX,int dimensionY);
         int GetDimensionX()const;
         int GetDimensionY()const;
-
         void afficheGrille()const;
 
 

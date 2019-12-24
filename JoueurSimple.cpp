@@ -7,7 +7,7 @@ JoueurSimple::JoueurSimple(): Joueur()
 }
 
 
-JoueurSimple::JoueurSimple(const string& nom, int x, int y): Joueur(nom, x, y)
+JoueurSimple::JoueurSimple(const string& nom): Joueur(nom)
 {
 
 }
