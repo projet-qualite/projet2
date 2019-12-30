@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1573908976 source:c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\main.cpp
+	<iostream>
+
+1574550112 source:c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\grille.cpp
+	"grille.h"
+
+1574550073 c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\grille.h
+
+1576615739 source:c:\users\oussama\desktop\testprojet\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1576874101 c:\users\oussama\desktop\testprojet\graphics.h
+
+1576874101 source:c:\users\oussama\desktop\testprojet\grille.cpp
+	"grille.h"
+	"graphics.h"
+	<iostream>
+
+1576874101 c:\users\oussama\desktop\testprojet\grille.h
+
+1576877547 source:c:\users\oussama\desktop\testprojet\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	"graphics.h"
+	"grille.h"
+
+1577040455 source:c:\users\oussama\desktop\projetgit\grille.cpp
+	"grille.h"
+	"graphics.h"
+	<iostream>
+
+1577040455 c:\users\oussama\desktop\projetgit\grille.h
+
+1577040455 c:\users\oussama\desktop\projetgit\graphics.h
+
+1577041670 source:c:\users\oussama\desktop\projetgit\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	"graphics.h"
+	"grille.h"
+
+1577040455 source:c:\users\oussama\desktop\projetgit\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1577037409 source:c:\users\oussama\desktop\projetgit\joueursimple.cpp
+	"JoueurSimple.h"
+	"Joueur.h"
+
+1577037409 c:\users\oussama\desktop\projetgit\joueursimple.h
+	"Joueur.h"
+
+1577037409 c:\users\oussama\desktop\projetgit\joueur.h
+	<string>
+	"elementdejeux.h"
+
+1577041435 c:\users\oussama\desktop\projetgit\elementdejeux.h
+	<iostream>
+	<string>
+
+1577037409 source:c:\users\oussama\desktop\projetgit\elementdejeux.cpp
+	"elementdejeux.h"
+
+1577037409 source:c:\users\oussama\desktop\projetgit\joueur.cpp
+	"Joueur.h"
+	<iostream>
+
