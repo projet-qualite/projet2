@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1577625372 source:c:\users\fry\desktop\poo renaissance\grille.cpp
+	"grille.h"
+	"graphics.h"
+	<iostream>
+	"math.h"
+	"debris.h"
+
+1576823541 c:\users\fry\desktop\poo renaissance\grille.h
+	<vector>
+	"elementdejeux.h"
+	"joueur.h"
+
+1577664580 source:c:\users\fry\desktop\poo renaissance\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"grille.h"
+	"graphics.h"
+	<iostream>
+	"elementdejeux.h"
+	"joueur.h"
+	"JoueurSimple.h"
+	"RobotAyb.h"
+	"RobotAybG1.h"
+	"RobotAybG2.h"
+	"debris.h"
+
+1571027256 source:c:\users\fry\desktop\poo\tphanoi\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1571341515 c:\users\fry\desktop\poo\tphanoi\graphics.h
+
+1571341515 c:\users\fry\desktop\poo renaissance\graphics.h
+
+1571027256 source:c:\users\fry\desktop\poo renaissance\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1576820597 source:c:\users\fry\desktop\poo renaissance\debris.cpp
+	"Debris.h"
+	<stdlib.h>
+
+1576820624 c:\users\fry\desktop\poo renaissance\debris.h
+	"elementdejeux.h"
+
+1576822132 source:c:\users\fry\desktop\poo renaissance\elementdejeux.cpp
+	"elementdejeux.h"
+	"graphics.h"
+
+1576822134 c:\users\fry\desktop\poo renaissance\elementdejeux.h
+	<iostream>
+	<string>
+
+1577664532 source:c:\users\fry\desktop\poo renaissance\joueur.cpp
+	"Joueur.h"
+	<iostream>
+	"grille.h"
+
+1577663631 c:\users\fry\desktop\poo renaissance\joueur.h
+	<string>
+	"elementdejeux.h"
+	"graphics.h"
+	"grille.h"
+
+1576196639 source:c:\users\fry\desktop\poo renaissance\joueursimple.cpp
+	"JoueurSimple.h"
+	"joueur.h"
+
+1576194542 c:\users\fry\desktop\poo renaissance\joueursimple.h
+	"joueur.h"
+
+1575762511 source:c:\users\fry\desktop\poo renaissance\robotayb.cpp
+	"RobotAyb.h"
+	<math.h>
+
+1575762481 c:\users\fry\desktop\poo renaissance\robotayb.h
+	"elementdejeux.h"
+	<string>
+
+1576194482 source:c:\users\fry\desktop\poo renaissance\robotaybg1.cpp
+	"RobotAybG1.h"
+	<iostream>
+	"graphics.h"
+
+1576194464 c:\users\fry\desktop\poo renaissance\robotaybg1.h
+	"RobotAyb.h"
+	<iostream>
+
+1575759968 source:c:\users\fry\desktop\poo renaissance\robotaybg2.cpp
+	"RobotAybG2.h"
+
+1575759973 c:\users\fry\desktop\poo renaissance\robotaybg2.h
+	"RobotAybG1.h"
+
