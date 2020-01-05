@@ -7,12 +7,10 @@ const int RAYON=30;
 const int PAS_DEPLACEMENT=100;
 
 
+///Construire un élement de jeu avec sn terrain
+elementdejeux::elementdejeux(Grille* terrain):d_terrain{terrain}
+{   terrain->ajouterElement(this); }
 
-elementdejeux::elementdejeux():d_nom("Player")
-{      d_x=POSITION_X;    d_y=POSITION_Y; }
-
-elementdejeux::elementdejeux(const string &nom): d_nom(nom)
-{      d_x=POSITION_X;    d_y=POSITION_Y; }
 
 /**void elementdejeux::affiche() const
 {
@@ -29,16 +27,21 @@ int elementdejeux::y() const
     return d_y;
 }
 
-string elementdejeux::nom() const
-{
-    return d_nom;
-}
+
 
 /** ajouter un terrain*/
 void elementdejeux::ajouterTerrain(Grille* terrain)
 {
     d_terrain=terrain;
 }
+/** tracer tout les elements de la grille
+void elementdejeux::tracerTout()
+{
+    for(auto element:d_terrain->d_element)    ///for(int i=0;i<d_terrain->d_element.size();i++)
+        {
+            element->tracer();
+        }
+}*/
 /** deplacer horizontalement l'element du jeu */
 void elementdejeux::deplacerHorizontal(char direction)
 {
@@ -48,7 +51,8 @@ void elementdejeux::deplacerHorizontal(char direction)
       {
         d_terrain->afficheGrille();
         ++d_x;
-        tracer();
+        //++d_y;
+        d_terrain->tracerTout();
         delay(3);
         cleardevice();
       }
@@ -58,7 +62,7 @@ void elementdejeux::deplacerHorizontal(char direction)
       {
         d_terrain->afficheGrille();
         --d_x;
-        tracer();
+        d_terrain->tracerTout();
         delay(3);
         cleardevice();
       }
@@ -73,7 +77,8 @@ void elementdejeux::deplacerVertical(char direction)
       {
         d_terrain->afficheGrille();
         ++d_y;
-        tracer();
+        d_terrain->afficheGrille();
+        d_terrain->tracerTout();
         delay(3);
         cleardevice();
       }
@@ -83,7 +88,8 @@ void elementdejeux::deplacerVertical(char direction)
       {
         d_terrain->afficheGrille();
         --d_y;
-        tracer();
+        d_terrain->afficheGrille();
+        d_terrain->tracerTout();
         delay(3);
         cleardevice();
       }

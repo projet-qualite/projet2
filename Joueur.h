@@ -1,22 +1,21 @@
 #ifndef JOUEUR_H
 #define JOUEUR_H
 #include <string>
+#include <iostream>
 #include "elementdejeux.h"
+///#include "grille.h"
 
-
-
-class Joueur:public elementdejeux
+using namespace std;
+///class Grille;
+class Joueur: public elementdejeux
 {
     public:
-        Joueur();
-        Joueur(const std::string& nom);
+        ///Joueur(Grille* terrain);
+        Joueur(Grille* terrain,const string &nom,int x,int y);
+        void attraperJoueur();
         virtual void tracer() ;
-     /**   virtual void up()       override;
-        virtual void down()     override;
-        virtual void right()    override;
-        virtual void left()     override;*/
-
-
+    private:
+        std::string d_nom;
 };
 
 #endif // JOUEUR_H

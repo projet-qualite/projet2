@@ -1,174 +1,165 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include<math.h>
 #include<windows.h>
+#include<vector>
+#include<typeinfo>
 #include"graphics.h"
 #include"grille.h"
 #include"elementdejeux.h"
 #include"Joueur.h"
+#include"RobotG1.h"
+#include"debris.h"
 using namespace std;
-/*
-static int dim;
+const int DIMENSION_X=6;
+const int DIMENSION_Y=6;
 
-void LireFichier(){
+bool gagner=false;
 
- ifstream fichier("projet.txt");
+/** teste si la partie est finie ou pas encore
+@param
+@return */
 
-   if(fichier)
-   {
-       string ligne;
+bool finPartie(Grille* terrain,Joueur* joueur)
+{
+    int nbRobot=0;
+    int i=0;
+    ///1er cas si il y'a plus de robots
 
+    while(i<terrain->d_element.size() && nbRobot==0)
+    {
+        if(typeid(*(terrain->d_element[i]))==typeid(RobotG1))
+        {
+            ++nbRobot;
 
-      while(getline(fichier, ligne))
-      {
-          dim=std::stoi( ligne );
-      }
+        }
+        ++i;
+    }
+    if(!nbRobot)
+    { gagner=true;  return true;}
 
-   }
-   else
-   {
-      cout << "ERREUR: Impossible d'ouvrir le fichier en lecture." << endl;
-   }
+   ///2e cas si le joueur et le robot ou le débris dans la meme position
+    i=0;
+    while(i<terrain->d_element.size())
+    {
+    if((typeid(*(terrain->d_element[i]))!=typeid(Joueur))&&(joueur->x()==terrain->d_element[i]->x())&&(joueur->y()==terrain->d_element[i]->y()))
+        {
 
+              return true;    }
+        ++i;
+    }
+        return false;
 }
-void modifierFichier(int n){
-            ofstream fichier("projet.txt");
 
-                   if(fichier)
-                   {
-                     fichier <<n ;
-                      }
 
-                   else
-                   {
-                      cout << "ERREUR: Impossible d'ouvrir le fichier en lecture." << endl;
-                   }
-
-}
-*/
+///Fonction principal pour lancer le Jeu
 int main()
 {
-    /*
-    int rep;
-do{
-    cout<<" pour continuer tapez 1 "<<endl<<" pour commencer une nouvelle partie tapez 2 "<<endl;
-    cin>>rep;
-    switch(rep){
 
-    case 1 :
-                LireFichier();
-                Grille{dim};
+/// Création du terrain
+ Grille G(DIMENSION_X,DIMENSION_Y);
 
-                break;
 
-    case 2 :
-                int choixDim;
-                do{
-                cout<<" veuillez choisir la dimension du terrain "<<endl;
+/// Création du joueur et l'ajouter sur la grille
+ Joueur joueur(&G,"Player",150,350);
 
-                cin>>choixDim;
-                }while(choixDim<3);
-                modifierFichier(choixDim);
+/// Création des Robot et l'ajouter sur la grille
 
-                break;
+ RobotG1 robot1(&G,650,150);
 
-    default : cout<<" Choix invalide " <<endl;
+ RobotG1 robot2(&G,650,650);
 
-    }
+ RobotG1 robot3(&G,150,150);
 
-    }while(rep!=1&&rep!=2);
-   return 0;
-*/
-///int x=150,y=150;
- Grille* G;
- G=new Grille(5,5);
- cout << "Entre un nom du Joueur";
-  string nom;
- cin >> nom;
- Joueur joueur(nom);
- joueur.ajouterTerrain(G);
- opengraphsize(1800,900);
+ RobotG1 robot4(&G,150,650);
 
-    G->afficheGrille();
-    ///circle(x,y,20);
-    joueur.tracer();
-    while(1)
-    {
+ ///Création des debris
+ debris debris1(&G,350,250);
+ debris debris2(&G,550,550);
+
+ ///Affichage du terrain et du jeu
+ ///Affichage en pleine écran
+DWORD screenWidth=GetSystemMetrics(SM_CXSCREEN);
+DWORD screenHeight=GetSystemMetrics(SM_CXSCREEN);
+ opengraphsize(screenWidth,screenHeight);
+
+    G.afficheGrille();
+///Tracer tout les elements que contient le terrain
+    G.tracerTout();
+
+/// while((robot1->x()!=joueur->x() || robot1->y()!=joueur->y())&&(robot2->x()!=joueur->x() || robot2->y()!=joueur->y()))
+bool test;
+    G.croisement();
+    G.afficheGrille();
+    G.tracerTout();
+while(1)
+  {
+      if(finPartie(&G,&joueur))
+        break;
+
+    ///Déplacer le joueur à droite
     if(GetAsyncKeyState(VK_RIGHT))
-    {
-       /** for(int i=0;i<100;i++)
-        {
+     {
+        if(finPartie(&G,&joueur)) break;
+        joueur.right();
+        G.tracerTout();
+        G.attaqueDesRobots();
+        G.tracerTout();
         G.afficheGrille();
-        circle(++x,y,20);
-        delay(1);
-        cleardevice();
-        }
-    circle(x,y,20);*/
-    joueur.right();
-    joueur.tracer();
-    G->afficheGrille();
-    }
+
+      }
     if(GetAsyncKeyState(VK_LEFT))
-    {
-       /** for(int i=0;i<100;i++)
-        {
+      {
+        if(finPartie(&G,&joueur)) break;
+        joueur.left();
+        G.tracerTout();
+        G.attaqueDesRobots();
+        G.tracerTout();
         G.afficheGrille();
-        circle(--x,y,20);
-        delay(1);
-        cleardevice();
-        }
-            circle(x,y,20);*/
-    joueur.left();
-    joueur.tracer();
-    G->afficheGrille();
-    }
+
+      }
     if(GetAsyncKeyState(VK_UP))
-    {
-        /**
-        for(int i=0;i<100;i++)
-        {
+      {
+        if(finPartie(&G,&joueur)) break;
+        joueur.up();
+        G.tracerTout();
+        G.attaqueDesRobots();
+        G.tracerTout();
         G.afficheGrille();
-        circle(x,--y,20);
-        delay(1);
-        cleardevice();
-        }
-            circle(x,y,20);*/
-    joueur.up();
-    joueur.tracer();
-    G->afficheGrille();
-    }
+     }
     if(GetAsyncKeyState(VK_DOWN))
-    {
-       /** for(int i=0;i<100;i++)
-        {
+      {
+       if(finPartie(&G,&joueur)) break;
+        joueur.down();
+        G.tracerTout();
+        G.attaqueDesRobots();
+        G.tracerTout();
         G.afficheGrille();
-        circle(x,++y,20);
-        delay(1);
-        cleardevice();
-        }
-            circle(x,y,20);*/
-    joueur.down();
-    joueur.tracer();
-    G->afficheGrille();
-    }
+      }
 
-    }
-
-  //  getch();
-    //closegraph();
-
- }
- /*
- cleardevice();
+     if(finPartie(&G,&joueur)) break;
  }
 
+    G.afficheGrille();
+    G.tracerTout();
+    getch();
+    closegraph();
+     if(gagner)
+     {
+         cout<<"Felicitations vous avez gagne"<<endl;
+     }
+     else
+     {   cout<< "\nFin de partie, joueur meurt"<<endl; }
+
+}
 
 
 
- cleardevice();
 
 
- }*/
+
+
 
 
 

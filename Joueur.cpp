@@ -1,47 +1,33 @@
 #include "Joueur.h"
 #include<iostream>
 #include"graphics.h"
+#include"grille.h"
 const int POSITION_X=150;
 const int POSITION_Y=150;
-const int RAYON=30;
+const int RAYON_JOUEUR=20;
 
-Joueur::Joueur(): elementdejeux()
-{}
 
-Joueur::Joueur(const string& nom): elementdejeux(nom)
-{}
+///constructeur du Joueur avec son terrain et son nom
+
+Joueur::Joueur(Grille* terrain,const string &nom,int x,int y):elementdejeux{terrain}
+{
+    ///d_terrain=terrain;
+    d_nom=nom;
+     d_x=x;    d_y=y;
+    d_terrain->ajouterJoueur(this);
+}
+
 /** Afficher un joueur comme un cercle */
 
 void Joueur::tracer()
 {
-    circle(d_x,d_y,RAYON);
+    setcolor(15);
+    circle(d_x,d_y,RAYON_JOUEUR);
 }
 
-/**void Joueur::up()
+void Joueur::attraperJoueur()
 {
-    if(d_x==0)
-    {
-        cout<<"Impossible de sortir de la grille"<<endl;
-    }else
-    {
-        --d_x;
-    }
 
 }
 
-void Joueur::down()
-{
-        ++d_x;
-}
-
-void Joueur::right()
-{
-        ++d_y;
-}
-
-void Joueur::left()
-{
-        --d_y;
-}
-*/
 

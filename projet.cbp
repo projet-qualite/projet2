@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,8 +36,10 @@
 		</Compiler>
 		<Unit filename="Joueur.cpp" />
 		<Unit filename="Joueur.h" />
-		<Unit filename="JoueurSimple.cpp" />
-		<Unit filename="JoueurSimple.h" />
+		<Unit filename="RobotG1.cpp" />
+		<Unit filename="RobotG1.h" />
+		<Unit filename="debris.cpp" />
+		<Unit filename="debris.h" />
 		<Unit filename="elementdejeux.cpp" />
 		<Unit filename="elementdejeux.h" />
 		<Unit filename="graphics.h" />

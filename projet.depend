@@ -1,52 +1,61 @@
 # depslib dependency file v1.0
-1573908976 source:c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\main.cpp
-	<iostream>
-
-1574550112 source:c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\grille.cpp
-	"grille.h"
-
-1574550073 c:\users\fatima zahra\desktop\codeblocks_dev\tp\projet\grille.h
-
-1576615739 source:c:\users\oussama\desktop\testprojet\winbgi.cpp
+1578169475 source:c:\users\oussama\desktop\projetgit\elementdejeux.cpp
+	"elementdejeux.h"
 	<windows.h>
-	<stddef.h>
-	<stdio.h>
-	<math.h>
 	"graphics.h"
 
-1576874101 c:\users\oussama\desktop\testprojet\graphics.h
-
-1576874101 source:c:\users\oussama\desktop\testprojet\grille.cpp
-	"grille.h"
-	"graphics.h"
+1578009042 c:\users\oussama\desktop\projetgit\elementdejeux.h
 	<iostream>
-
-1576874101 c:\users\oussama\desktop\testprojet\grille.h
-
-1576877547 source:c:\users\oussama\desktop\testprojet\main.cpp
-	<iostream>
-	<fstream>
 	<string>
-	<windows.h>
-	"graphics.h"
 	"grille.h"
 
-1577040455 source:c:\users\oussama\desktop\projetgit\grille.cpp
-	"grille.h"
-	"graphics.h"
-	<iostream>
-
-1577040455 c:\users\oussama\desktop\projetgit\grille.h
+1578054987 c:\users\oussama\desktop\projetgit\grille.h
+	<vector>
+	"elementdejeux.h"
 
 1577040455 c:\users\oussama\desktop\projetgit\graphics.h
 
-1577041670 source:c:\users\oussama\desktop\projetgit\main.cpp
+1578055003 source:c:\users\oussama\desktop\projetgit\grille.cpp
+	"grille.h"
+	"graphics.h"
+	"RobotG1.h"
+	"Joueur.h"
+	"debris.h"
+	<iostream>
+	<typeinfo>
+
+1578068095 source:c:\users\oussama\desktop\projetgit\joueur.cpp
+	"Joueur.h"
+	<iostream>
+	"graphics.h"
+	"grille.h"
+
+1578010424 c:\users\oussama\desktop\projetgit\joueur.h
+	<string>
+	<iostream>
+	"elementdejeux.h"
+
+1577128039 source:c:\users\oussama\desktop\projetgit\joueursimple.cpp
+	"JoueurSimple.h"
+	"Joueur.h"
+
+1577128039 c:\users\oussama\desktop\projetgit\joueursimple.h
+	"Joueur.h"
+
+1578164341 source:c:\users\oussama\desktop\projetgit\main.cpp
 	<iostream>
 	<fstream>
 	<string>
+	<math.h>
 	<windows.h>
+	<vector>
+	<typeinfo>
 	"graphics.h"
 	"grille.h"
+	"elementdejeux.h"
+	"Joueur.h"
+	"RobotG1.h"
+	"debris.h"
 
 1577040455 source:c:\users\oussama\desktop\projetgit\winbgi.cpp
 	<windows.h>
@@ -55,25 +64,101 @@
 	<math.h>
 	"graphics.h"
 
-1577037409 source:c:\users\oussama\desktop\projetgit\joueursimple.cpp
-	"JoueurSimple.h"
+1578010220 source:c:\users\oussama\desktop\projetgit\robotg1.cpp
+	"graphics.h"
+	"RobotG1.h"
+	<iostream>
+	<math.h>
 	"Joueur.h"
 
-1577037409 c:\users\oussama\desktop\projetgit\joueursimple.h
-	"Joueur.h"
-
-1577037409 c:\users\oussama\desktop\projetgit\joueur.h
-	<string>
+1578009354 c:\users\oussama\desktop\projetgit\robotg1.h
 	"elementdejeux.h"
+	<iostream>
 
-1577041435 c:\users\oussama\desktop\projetgit\elementdejeux.h
+1578004654 source:c:\users\oussama\desktop\projetgit\debris.cpp
+	"debris.h"
+	<iostream>
+	"graphics.h"
+
+1578004593 c:\users\oussama\desktop\projetgit\debris.h
+	"elementdejeux.h"
+	<iostream>
+
+1578004654 source:c:\users\oussama\desktop\projetgit - copie\debris.cpp
+	"debris.h"
+	<iostream>
+	"graphics.h"
+
+1578239793 c:\users\oussama\desktop\projetgit - copie\debris.h
+	"elementdejeux.h"
+	<iostream>
+
+1578238701 c:\users\oussama\desktop\projetgit - copie\elementdejeux.h
 	<iostream>
 	<string>
+	"grille.h"
 
-1577037409 source:c:\users\oussama\desktop\projetgit\elementdejeux.cpp
+1578054987 c:\users\oussama\desktop\projetgit - copie\grille.h
+	<vector>
 	"elementdejeux.h"
 
-1577037409 source:c:\users\oussama\desktop\projetgit\joueur.cpp
+1577040455 c:\users\oussama\desktop\projetgit - copie\graphics.h
+
+1578169543 source:c:\users\oussama\desktop\projetgit - copie\elementdejeux.cpp
+	"elementdejeux.h"
+	<windows.h>
+	"graphics.h"
+
+1578055003 source:c:\users\oussama\desktop\projetgit - copie\grille.cpp
+	"grille.h"
+	"graphics.h"
+	"RobotG1.h"
+	"Joueur.h"
+	"debris.h"
+	<iostream>
+	<typeinfo>
+
+1578009354 c:\users\oussama\desktop\projetgit - copie\robotg1.h
+	"elementdejeux.h"
+	<iostream>
+
+1578176667 c:\users\oussama\desktop\projetgit - copie\joueur.h
+	<string>
+	<iostream>
+	"elementdejeux.h"
+
+1578243801 source:c:\users\oussama\desktop\projetgit - copie\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<math.h>
+	<windows.h>
+	<vector>
+	<typeinfo>
+	"graphics.h"
+	"grille.h"
+	"elementdejeux.h"
+	"Joueur.h"
+	"RobotG1.h"
+	"debris.h"
+
+1578010220 source:c:\users\oussama\desktop\projetgit - copie\robotg1.cpp
+	"graphics.h"
+	"RobotG1.h"
+	<iostream>
+	<math.h>
+	"Joueur.h"
+
+1577040455 source:c:\users\oussama\desktop\projetgit - copie\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1578176681 source:c:\users\oussama\desktop\projetgit - copie\joueur.cpp
 	"Joueur.h"
 	<iostream>
+	"graphics.h"
+	"grille.h"
 

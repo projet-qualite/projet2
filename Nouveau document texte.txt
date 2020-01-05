@@ -1,0 +1,32 @@
+void Grille::croisement()
+{
+  for(int i=0;i<d_element.size();++i)
+    {
+        elementdejeux* rb=d_element[i];
+        int x1=rb->x(); int y1=rb->y();
+    if(typeid(*rb)==typeid(RobotG1))
+     {
+        for(int j=i+1;j<d_element.size();++j)
+         {
+            if(x1==d_element[j]->x() && y1==d_element[j]->y())
+             {
+                ///si le robot se croisent avec un débris il disparait
+                if(typeid(*(d_element[j]))==typeid(debris))
+                    {
+                     d_element.erase(d_element.begin()+i);
+                     --j;
+                    }
+                else if(typeid(*(d_element[j]))==typeid(RobotG1))
+                    {
+                        ///int posRb1=i;   int posRb2=j;
+                        ///terrain->d_element.erase(terrain->d_element.begin()+posRb1);
+                        d_element.erase(d_element.begin()+j);
+                        debris* debris3=new debris(this,x1,y1);
+                        --j;
+                    }
+             }
+           }
+        }
+
+    }
+}
