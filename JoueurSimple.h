@@ -7,10 +7,10 @@ class JoueurSimple: public Joueur
 {
     public:
         JoueurSimple(const string& nom, int x, int y);
-        void rightup();
+        void rightup(int dim);
         void leftup();
-        void rightdown();
-        void leftdown();
+        void rightdown(int dim);
+        void leftdown(int dim);
         virtual void affiche() const;
 };
 

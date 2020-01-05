@@ -13,6 +13,7 @@
 #include "debris.h"
 #include <stdio.h>
 #include <time.h>
+#include<typeinfo>
 
 
 using namespace std;
@@ -41,11 +42,12 @@ void LireFichier(){
 
 }
 void modifierFichier(int n){
+
             ofstream fichier("projet.txt");
 
                    if(fichier)
                    {
-                     fichier <<n ;
+                     fichier <<n;
                       }
 
                    else
@@ -54,15 +56,37 @@ void modifierFichier(int n){
                    }
 
 }
+int finPartie(Grille* terrain,Joueur* joueur)
+{
+    int nbRobot=0;
+    int fin=1;
+    int i=0;
+    ///1er cas si il y'a plus de robots
+
+    while(i<terrain->tab.size() && nbRobot==0)
+    {
+        if(typeid(*(terrain->tab[i]))==typeid(RobotAybG1))
+        {
+            ++nbRobot;
+        }
+        ++i;
+    }
+    if(nbRobot==0) fin=1;
+
+   ///2e cas si le joueur et le robot ou le débris dans la meme position
+    i=0;
+    while(i<terrain->tab.size())
+    {
+        if((typeid(*(terrain->tab[i]))!=typeid(Joueur))&&(joueur->x()==terrain->tab[i]->x())&&(joueur->y()==terrain->tab[i]->y()))
+            {return true;}
+        ++i;
+    }
+
+}
 
 void creerPartie()
 {
-    /*int x,y;
-    int nb;
-    string nom;
-    cout<<"Dimension de la grille : ";
-    cin>>x;
-    cin>>y;*/
+
     int rep;
 do{
     cout<<" pour continuer tapez 1 "<<endl<<" pour commencer une nouvelle partie tapez 2 "<<endl;
@@ -71,18 +95,10 @@ do{
 
     case 1 :
                 LireFichier();
-
                 break;
-
     case 2 :
                 int choixDim;
-                do{
-                cout<<" veuillez choisir la dimension du terrain "<<endl;
-
-                cin>>choixDim;
-                }while(choixDim<3);
                 modifierFichier(choixDim);
-
                 break;
 
     default : cout<<" Choix invalide " <<endl;
@@ -91,89 +107,75 @@ do{
 
     }while(rep!=1&&rep!=2);
 
-    Grille g{dim,dim};
-   float temps;
-    clock_t t1, t2;
-
-string nom;
-        cout<<"Entrer le nom du Robot 1 "<<endl;
-        cin>>nom;
-
-        RobotAybG1 r{nom,dim-1,dim-2};
-        g.MettreEn(&r);
-
-        cout<<"Entrer le nom du Robot 2 "<<endl;
-        cin>>nom;
-        RobotAybG1 r2{nom,dim-3,dim-2};
-        g.MettreEn(&r2);
-int x,y;
-    do{
-        cout<<"Entrer la position du joueur "<<endl;
-        cin>>x;
-        cin>>y;
-      }while(x>dim||y>dim);//pour ne pas depaser la dim de la grille
-
-        cout<<"Entrer le nom du joueur "<<endl;
-        cin>>nom;
-        JoueurSimple j{nom,x,y};
-        g.MettreEn(&j);
-        int q=1;
+        Grille *g=new Grille{dim,dim};
+        float temps;
+        clock_t t1,t2;
+        JoueurSimple *j=new JoueurSimple("J1",2,3);
+        g->MettreEn(j);
+        RobotAybG1 *r=new RobotAybG1{"R1",dim-1,dim-2};
+        g->MettreEn(r);
+        RobotAybG1 *r1=new RobotAybG1{"R2",1,0};
+        g->MettreEn(r1);
+        Debris *D =new Debris("D1",3,2);
+        g->MettreEn(D);
         char choix;
         t1 = clock();
-    do{
-            g.afficheGrille2();
 
-            cout<<"[Deplacer le joueur]"<<endl;
-            cout<<"r-------------------: A droite"<<endl;
-            cout<<"l-------------------: A gauche"<<endl;
-            cout<<"u-------------------: En haut"<<endl;
-            cout<<"d-------------------: En bas"<<endl;
+        g->afficheGrille2();
+
+       do{
+            cout<<"[ Deplacer le joueur ]"<<endl;
+            cout<<" r-------------------: A  droite "<<endl;
+            cout<<" l-------------------: A  gauche "<<endl;
+            cout<<" u-------------------: En  haut "<<endl;
+            cout<<" d-------------------: En  bas "<<endl;
             cin>>choix;
             switch(choix)
             {
-                case 'r': j.right();
+                case 'r': j->right(dim); r->deplacement(*j,dim);r1->deplacement(*j,dim);g->croisement();
                 break;
-                case 'l': j.left();
+                case 'l': j->left();     r->deplacement(*j,dim);r1->deplacement(*j,dim);g->croisement();
                 break;
-                case 'u': j.up();
+                case 'u':  j->up();       r->deplacement(*j,dim);r1->deplacement(*j,dim);g->croisement();
                 break;
-                case 'd': j.down();
+                case 'd':  j->down(dim);  r->deplacement(*j,dim);r1->deplacement(*j,dim);g->croisement();
                 break;
             }
-            //cleardevice();
-            g.afficheGrille2();
-            do{
-                cout<<"Voulez vous une autre partie ? (Oui : 1 | Non : 0)"<<endl;
-                cin>>q;
-            }while(q!=0 && q!=1);
-            t2 = clock();
-            temps = (float)(t2-t1)/CLOCKS_PER_SEC;
-    printf("votre score est de  = %f secondes", temps);
-    }while(q!=0);
+
+
+
+            g->afficheGrille2();
+
+
+            }while(finPartie(g,j));
+                 t2 = clock();
+                 temps = (float)(t2-t1)/CLOCKS_PER_SEC;
+             for (int i=0;i<g->tab.size();++i){
+
+                if(typeid(*(g->tab[i]))==typeid(RobotAybG1)){
+
+                    cout<<"corrdonnees \n";
+                    cout<<g->tab[i]->x()<<"  "<<g->tab[i]->y()<<"\n";
+                }
+
+            }
+            for (int i=0;i<g->tab.size();++i){
+
+                if(typeid(*(g->tab[i]))==typeid(Debris)){
+
+                    cout<<"corrdonnees \n";
+                    cout<<g->tab[i]->x()<<"  "<<g->tab[i]->y()<<"\n";
+                }
+
+            }
+            printf(" votre score est de  = %f secondes \n", temps);
+
+
 }
 
 
 int main()
 {
-
-    /*Grille gr(5,5);
-    RobotAybG1 r1{"fry",1,0};
-    gr.MettreEn(&r1);
-    RobotAybG1 r2{"morrel",0,0};
-    gr.MettreEn(&r2);
-    RobotAybG1 r4{"lito",4,0};
-    gr.MettreEn(&r4);
-    JoueurSimple j1{"Ayoub",3,2};
-    gr.MettreEn(&j1);
-    int q=0;*/
-    /*while(q<4)
-    {
-        gr.afficheGrille();
-        r4.right();
-        q++;
-        cleardevice();
-        gr.afficheGrille();
-    }*/
     creerPartie();
 
     return 0;

@@ -1,21 +1,16 @@
 #ifndef DEBRIS_H
 #define DEBRIS_H
+#include "elementdejeux.h"
 
 
-class Debris
+class Debris:public elementdejeux
 {
-     public:
+    public:
         Debris();
-        Debris(int x, int y);
+        Debris(const string &nom,int x, int y);
         int posx() const;
         int posy() const;
-        virtual ~Debris();
-
-    protected:
-
-    private:
-        int d_x;
-        int d_y;
+        //virtual ~Debris();
 };
 
 #endif // DEBRIS_H

@@ -9,9 +9,9 @@ class elementdejeux
 {
     public:
         elementdejeux();
-        ~elementdejeux();
+        ///~elementdejeux();
         elementdejeux(const string &nom, int x, int y);
-        virtual void affiche() const=0;
+        //virtual void affiche() const;
         virtual void affiche2() const;
         int x()const ;
         int y()const ;

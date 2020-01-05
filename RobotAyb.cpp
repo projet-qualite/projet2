@@ -1,6 +1,8 @@
 #include "RobotAyb.h"
 #include<math.h>
 
+#include "RobotAybG1.h"
+
 
 
 RobotAyb::RobotAyb(const string &nom, int x,int y): elementdejeux(nom, x, y)
@@ -17,9 +19,27 @@ int RobotAyb::y() const
     return d_y;
 }
 
-double RobotAyb::distance(const RobotAyb& r) const
+/*void RobotAyb::deplacement(const Joueur& j) const
 {
-    double dx=r.x()-x();
-    double dy=r.y()-y();
-    return sqrt(dx*dx+dy*dy);
-}
+    double dx=j.x()-x();
+    double dy=j.y()-y();
+    if (dx==0 && dy!=0){
+
+        if (dy<0) up();
+        else down();
+
+    }
+    else
+        if(dx!=0 &&dy==0){
+         if (dx<0) left();
+        else right();
+
+    }
+    else {
+
+        if (abs(dx)>abs(dy)) left();
+        else right();
+
+    }
+
+}*/

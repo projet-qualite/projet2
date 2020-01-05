@@ -2,14 +2,9 @@
 #include <stdlib.h>
 
 
-Debris::Debris(): d_x(rand()%5+3),d_y(rand()%5)
-{
-    //ctor
-}
 
-Debris::Debris(int x, int y): d_x(x),d_y(y)
+Debris::Debris(const string &nom,int x, int y):elementdejeux(nom,x,y)
 {
-    //ctor
 }
 
 int Debris::posx() const
@@ -23,7 +18,3 @@ int Debris::posy() const
     return d_y;
 }
 
-Debris::~Debris()
-{
-    //dtor
-}

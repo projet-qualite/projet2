@@ -9,10 +9,10 @@ JoueurSimple::JoueurSimple(const string& nom, int x, int y): Joueur(nom, x, y)
 
 }
 
-void JoueurSimple::rightup()
+void JoueurSimple::rightup(int dim)
 {
     this->up();
-    this->right();
+    this->right(dim);
 }
 
 void JoueurSimple::leftup()
@@ -21,15 +21,15 @@ void JoueurSimple::leftup()
     this->left();
 }
 
-void JoueurSimple::rightdown()
+void JoueurSimple::rightdown(int dim)
 {
-    this->down();
-    this->right();
+    this->down(dim);
+    this->right(dim);
 }
 
-void JoueurSimple::leftdown()
+void JoueurSimple::leftdown(int dim)
 {
-    this->down();
+    this->down(dim);
     this->left();
 }
 

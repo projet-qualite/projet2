@@ -7,10 +7,7 @@ Joueur::Joueur(const string& nom, int x, int y): elementdejeux(nom ,x, y)
 
 void Joueur::up()
 {
-    if(d_x==0)
-    {
-        cout<<"Impossible de sortir de la grille"<<endl;
-    }else
+ if(d_x>0)
     {
         --d_x;
     }
@@ -18,37 +15,31 @@ void Joueur::up()
 
 
 
-void Joueur::down()
+void Joueur::down(int dim)
 {
-    //if(d_x== taillegrille)
-    //{
-     //   cout<<"Impossible de sortir de la grille"<<endl;
-   // }else
-   // {
+ if(d_x<dim)
+    {
         ++d_x;
-   //}
+    }
+
 }
 
-void Joueur::right()
+void Joueur::right(int dim)
 {
-    //if(d_y==taillegrille)
-   // {
-     //   cout<<"Impossible de sortir de la grille"<<endl;
-    //}else
-    //{
+if(d_y<dim)
+    {
         ++d_y;
-    //}
+    }
+
 }
 
 void Joueur::left()
 {
-    //if(d_y==0)
-    //{
-      //  cout<<"Impossible de sortir de la grille"<<endl;
-    //}else
-    //{
+if(d_y!=0)
+    {
         --d_y;
-    //}
+    }
+
 }
 
 /*void Joueur::rightup()

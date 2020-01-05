@@ -6,10 +6,10 @@ RobotAybG2::RobotAybG2(const string &nom, int x, int y):RobotAybG1(nom,x,y)
     //ctor
 }
 
-void RobotAybG2::rightup()
+void RobotAybG2::rightup(int dim)
 {
     this->up();
-    this->right();
+    this->right(dim);
 }
 
 void RobotAybG2::leftup()
@@ -18,14 +18,14 @@ void RobotAybG2::leftup()
     this->left();
 }
 
-void RobotAybG2::rightdown()
+void RobotAybG2::rightdown(int dim)
 {
-    this->down();
-    this->right();
+    this->down( dim);
+    this->right(dim);
 }
 
-void RobotAybG2::leftdown()
+void RobotAybG2::leftdown(int dim)
 {
-    this->down();
+    this->down( dim);
     this->left();
 }

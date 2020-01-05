@@ -10,9 +10,11 @@ class RobotAybG1: public RobotAyb
         RobotAybG1();
         RobotAybG1(const string &nom, int x, int y);
         virtual void affiche() const;
+           void deplacement(const Joueur& j,int dim) ;
+
         void up();
-        void down();
-        void right();
+        void down(int dim);
+        void right(int dim);
         void left();
 
 };

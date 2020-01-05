@@ -14,15 +14,16 @@ public:
         int GetDimensionY() const;
         void afficheGrille()const;
         void afficheGrille2() const;
+        void croisement() ;
         void MettreEn(elementdejeux* value);
-        std::vector<elementdejeux*> tab() const;
+        std::vector<elementdejeux*> tab;
 
 
 
 private:
 
     int D_dimensionX,D_dimensionY;
-    std::vector<elementdejeux*> d_grille;
+
 
 
 };

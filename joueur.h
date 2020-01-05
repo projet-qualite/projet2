@@ -11,8 +11,8 @@ class Joueur:public elementdejeux
     public:
         Joueur(const string& nom,int x, int y);
         void up();
-        void down();
-        void right();
+        void down(int dim);
+        void right(int dim);
         void left();
         //int dureevie() const;
         //void survivre();

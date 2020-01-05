@@ -95,25 +95,34 @@
 1575759973 c:\users\fry\desktop\poo renaissance\robotaybg2.h
 	"RobotAybG1.h"
 
-<<<<<<< HEAD
-1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\debris.cpp
+1576615739 D
+
+1578143847 source:c:\users\fatima zahra\desktop\qualite-prog\debris.cpp
 	"Debris.h"
 	<stdlib.h>
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\debris.h
+1578140999 c:\users\fatima zahra\desktop\qualite-prog\debris.h
+	"elementdejeux.h"
 
-1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\elementdejeux.cpp
+1578143836 source:c:\users\fatima zahra\desktop\qualite-prog\elementdejeux.cpp
 	"elementdejeux.h"
 	"graphics.h"
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\elementdejeux.h
+1578141237 c:\users\fatima zahra\desktop\qualite-prog\elementdejeux.h
 	<iostream>
 	<string>
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\graphics.h
+1576880785 c:\users\fatima zahra\desktop\qualite-prog\graphics.h
 
-1576876115 source:c:\users\fatima zahra\desktop\qualite-prog\grille.cpp
-=======
+1578162810 source:c:\users\fatima zahra\desktop\qualite-prog\grille.cpp
+	"grille.h"
+	"graphics.h"
+	<iostream>
+	"math.h"
+	"RobotAybG1.h"
+	<typeinfo>
+	"debris.h"
+
 1576615739 source:c:\users\oussama\desktop\testprojet\debris.cpp
 	"Debris.h"
 	<stdlib.h>
@@ -131,23 +140,34 @@
 1576615739 c:\users\oussama\desktop\testprojet\graphics.h
 
 1576615739 source:c:\users\oussama\desktop\testprojet\grille.cpp
->>>>>>> 13400381fdcb5afe8f1faafa27cb6bbe0cd1c709
+
+1576876688 00381fdcb5afe8f1faafa27cb6bbe0cd1c709
 	"grille.h"
 	"graphics.h"
 	<iostream>
 	"math.h"
+	<string>
+	"elementdejeux.h"
+	"graphics.h"
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
 
-<<<<<<< HEAD
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\grille.h
+1578162390 c:\users\fatima zahra\desktop\qualite-prog\grille.h
 	<vector>
 	"elementdejeux.h"
 
-1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\joueur.cpp
+1577977429 source:c:\users\fatima zahra\desktop\qualite-prog\joueur.cpp
 	"Joueur.h"
 	<iostream>
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\joueur.h
-=======
+1577977237 c:\users\fatima zahra\desktop\qualite-prog\joueur.h
+	<string>
+	"elementdejeux.h"
+	"graphics.h"
+
 1576615739 c:\users\oussama\desktop\testprojet\grille.h
 	<vector>
 	"elementdejeux.h"
@@ -157,44 +177,42 @@
 	<iostream>
 
 1576872410 c:\users\oussama\desktop\testprojet\joueur.h
->>>>>>> 13400381fdcb5afe8f1faafa27cb6bbe0cd1c709
-	<string>
-	"elementdejeux.h"
-	"graphics.h"
 
-<<<<<<< HEAD
-1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\joueursimple.cpp
+1577977501 source:c:\users\fatima zahra\desktop\qualite-prog\joueursimple.cpp
 	"JoueurSimple.h"
 	"joueur.h"
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\joueursimple.h
+1577977537 c:\users\fatima zahra\desktop\qualite-prog\joueursimple.h
 	"joueur.h"
 
-1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\robotayb.cpp
+1577713740 source:c:\users\fatima zahra\desktop\qualite-prog\robotayb.cpp
 	"RobotAyb.h"
 	<math.h>
+	"RobotAybG1.h"
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\robotayb.h
+1577713713 c:\users\fatima zahra\desktop\qualite-prog\robotayb.h
 	"elementdejeux.h"
 	<string>
+	"Joueur.h"
 
-1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\robotaybg1.cpp
+1577987254 source:c:\users\fatima zahra\desktop\qualite-prog\robotaybg1.cpp
 	"RobotAybG1.h"
 	<iostream>
 	"graphics.h"
+	"math.h"
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\robotaybg1.h
+1577976952 c:\users\fatima zahra\desktop\qualite-prog\robotaybg1.h
 	"RobotAyb.h"
 	<iostream>
 
-1576874213 source:c:\users\fatima zahra\desktop\qualite-prog\robotaybg2.cpp
+1577976992 source:c:\users\fatima zahra\desktop\qualite-prog\robotaybg2.cpp
 	"RobotAybG2.h"
 
-1576874213 c:\users\fatima zahra\desktop\qualite-prog\robotaybg2.h
+1577977111 c:\users\fatima zahra\desktop\qualite-prog\robotaybg2.h
 	"RobotAybG1.h"
 
 1576872678 source:c:\users\fatima zahra\desktop\qualite-prog\winbgi.cpp
-=======
+
 1576615739 source:c:\users\oussama\desktop\testprojet\joueursimple.cpp
 	"JoueurSimple.h"
 	"joueur.h"
@@ -241,15 +259,8 @@
 	"RobotAybG2.h"
 
 1576615739 source:c:\users\oussama\desktop\testprojet\winbgi.cpp
->>>>>>> 13400381fdcb5afe8f1faafa27cb6bbe0cd1c709
-	<windows.h>
-	<stddef.h>
-	<stdio.h>
-	<math.h>
-	"graphics.h"
 
-<<<<<<< HEAD
-1576876688 source:c:\users\fatima zahra\desktop\qualite-prog\main.cpp
+1578164064 source:c:\users\fatima zahra\desktop\qualite-prog\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -265,6 +276,7 @@
 	"debris.h"
 	<stdio.h>
 	<time.h>
+	<typeinfo>
 
-=======
->>>>>>> 13400381fdcb5afe8f1faafa27cb6bbe0cd1c709
+1576876688 
+

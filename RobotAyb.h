@@ -2,6 +2,8 @@
 #define ROBOTAYB_H
 #include "elementdejeux.h"
 #include<string>
+#include "Joueur.h"
+
 
 using namespace std;
 
@@ -11,7 +13,7 @@ public:
     RobotAyb(const string &nom, int x, int y);
     int x() const;
     int y() const;
-    double distance(const RobotAyb& r) const;
+   //void deplacement(const Joueur& j) const;
     //virtual void setposx()=0;
     //virtual void setposy()=0;
 

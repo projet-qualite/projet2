@@ -2,19 +2,22 @@
 #include "graphics.h"
 #include <iostream>
 #include "math.h"
+#include "RobotAybG1.h"
+#include<typeinfo>
+#include "debris.h"
 
 using namespace std;
 
-Grille::Grille(int dimensionX,int dimensionY):D_dimensionX{dimensionX},D_dimensionY{dimensionY},d_grille{}
+Grille::Grille(int dimensionX,int dimensionY):D_dimensionX{dimensionX},D_dimensionY{dimensionY}
 {
 
 }
 
 Grille::~Grille()
 {
-    for(int i=0;i<d_grille.size();++i)
+    for(int i=0;i<tab.size();++i)
     {
-        delete d_grille[i];
+        delete tab[i];
     }
 }
 
@@ -32,7 +35,7 @@ int Grille::GetDimensionY() const
 
 void Grille::MettreEn(elementdejeux* value)
 {
-	d_grille.push_back(value);
+	tab.push_back(value);
 }
 
 
@@ -74,58 +77,81 @@ for(int i=0;i<D_dimensionX;++i)
 
 }
 
-for(int i=0; i<d_grille.size();++i)
+for(int i=0; i<tab.size();++i)
     {
 
-            d_grille[i]->affiche();
-
-
-
+            tab[i]->affiche2();
     }
 
 
 }
 
-vector<elementdejeux*> Grille::tab() const
-{
-    return d_grille;
-}
 
 
 void Grille::afficheGrille2() const
 {
-    int trouve=0;
-    elementdejeux* element;
-for(int i=0; i<D_dimensionX;++i)
+        int trouve=0;
+        elementdejeux* element;
+
+    for(int i=0; i<D_dimensionX;++i)
     {
+
         for(int j=0;j<D_dimensionY;++j)
         {
-            for(int k=0;k<d_grille.size();++k)
+
+
+            for(int k=0;k<tab.size();++k)
             {
-                if(i==d_grille[k]->x() && j== d_grille[k]->y())
+                if(i==tab[k]->x() && j==tab[k]->y())
                 {
-                    element=d_grille[k];
+                    tab[k]->affiche2();
                     trouve=1;
                 }
+
             }
 
-            if(trouve==1)
-            {
-                element->affiche2();
-            }
-            else{
+            if(trouve==0)
                 cout<<"("<<i<<","<<j<<")";
-            }
             trouve=0;
-
-
-
-
 
             cout<<" ";
         }
-        cout<<std::endl;
-    }
-    cout<<endl;
+        cout<<endl;
+   }
+
 
 }
+
+void Grille::croisement()
+{
+  for(int i=0;i<tab.size();++i)
+    {
+        elementdejeux* rb=tab[i];
+        int x1=rb->x(); int y1=rb->y();
+
+    if(typeid(*rb)==typeid(RobotAybG1))
+     {
+        for(int j=i+1;j<tab.size();++j)
+         {
+            if(x1==tab[j]->x() && y1==tab[j]->y())
+             {
+                if(typeid(*(tab[j]))==typeid(Debris))
+                    {
+                     tab.erase(tab.begin()+i);
+                     --j;
+                    }
+                else if(typeid(*(tab[j]))==typeid(RobotAybG1))
+                    {
+
+                       tab.erase(tab.begin()+j);
+                        Debris* debris3=new Debris("Debris",x1,y1);
+                        this->MettreEn(debris3);
+                        --j;
+                    }
+             }
+           }
+        }
+
+    }
+}
+
