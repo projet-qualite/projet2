@@ -44,4 +44,5 @@ void JoueurSimple::affiche() const
     int y3=190+(d_y)*150;
     int tab[]={x1,y1,x2,y2,x3,y3,x1,y1};
     fillpoly(4,tab);
+    //
 }
